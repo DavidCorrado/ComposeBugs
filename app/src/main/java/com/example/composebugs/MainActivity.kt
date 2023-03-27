@@ -29,7 +29,10 @@ class MainActivity : ComponentActivity() {
             var isLoading by remember { mutableStateOf(false) }
             LaunchedEffect(key1 = isLoading) {
                 if (isLoading) {
-                    delay(500L) // This delay allows time for focus to change to the dialog.  Removing or making it like 100 is basically the same as no dialog
+                    // This delay allows time for focus to change to the dialog.
+                    // Removing or making it like 100 is basically the same as no dialog
+                    // If you increase the delay to something large like 2500 then you give the new window enough time to complete run so the next page does get immediate focus
+                    delay(500L)
                     isLoading = false
                 }
             }
