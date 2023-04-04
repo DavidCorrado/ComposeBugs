@@ -11,6 +11,7 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
+import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.rememberPagerState
 import com.google.accompanist.swiperefresh.SwipeRefresh
@@ -18,6 +19,7 @@ import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 
 class SixthFragment : Fragment() {
 
+    @OptIn(ExperimentalPagerApi::class)
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
